@@ -24,92 +24,127 @@
   <body>
     <header class="py-5">
       <h1>Exercise tracker</h1>
+      <p class="pt-3">
+        Fourth project mandatory requirement to obtain Back End Development and
+        APIs Certification from
+        <a
+          href="https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/exercise-tracker"
+          >freeCodeCamp</a
+        >
+      </p>
     </header>
     <main>
-      <div class="container">
-        <div class="contenedor_forms">
-          <form action="/api/users" method="post" class="bg-dark text-white">
-            <h2>Create a New User</h2>
-            <p class="code_container"><code>POST /api/users</code></p>
+      <div class="contenedor_forms py-5">
+        <form action="/api/users" method="post" class="bg-dark text-white">
+          <h2>Create a New User</h2>
+          <p class="code_container"><code>POST /api/users</code></p>
+          <input
+            id="uname"
+            type="text"
+            name="username"
+            placeholder="username"
+            required
+          />
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+        <form id="exercise-form" method="post" class="bg-dark text-white">
+          <h2>Add exercises</h2>
+          <p class="code_container">
+            <code>POST /api/users/:_id/exercises</code>
+          </p>
+          <div>
+            <label for="uid" class="form-label d-block text-center"
+              >Add a user ID</label
+            >
+            <input id="uid" type="text" name="_id" placeholder="_id" required />
+          </div>
+
+          <div>
+            <label for="desc" class="form-label d-block text-center"
+              >Description</label
+            >
             <input
-              id="uname"
+              id="desc"
               type="text"
-              name="username"
-              placeholder="username"
+              name="description"
+              placeholder="description*"
               required
             />
-            <button type="submit" class="btn btn-primary w-100">Submit</button>
-          </form>
-          <form id="exercise-form" method="post" class="bg-dark text-white">
-            <h2>Add exercises</h2>
-            <p class="code_container">
-              <code>POST /api/users/:_id/exercises</code>
-            </p>
-            <div>
-              <label for="uid" class="form-label d-block text-center"
-                >Add a user ID</label
-              >
-              <input
-                id="uid"
-                type="text"
-                name="_id"
-                placeholder="_id"
-                required
-              />
-            </div>
+          </div>
 
-            <div>
-              <label for="desc" class="form-label d-block text-center"
-                >Description</label
-              >
-              <input
-                id="desc"
-                type="text"
-                name="description"
-                placeholder="description*"
-                required
-              />
-            </div>
+          <div>
+            <label for="dur" class="form-label d-block text-center"
+              >Duration</label
+            >
+            <input
+              id="dur"
+              type="number"
+              name="duration"
+              placeholder="duration* (mins.)"
+              required
+              min="0"
+            />
+          </div>
 
-            <div>
-              <label for="dur" class="form-label d-block text-center"
-                >Duration</label
-              >
-              <input
-                id="dur"
-                type="number"
-                name="duration"
-                placeholder="duration* (mins.)"
-                required
-                min="0"
-              />
-            </div>
+          <div>
+            <label for="date" class="form-label d-block text-center"
+              >Date</label
+            >
+            <input
+              id="date"
+              type="date"
+              name="date"
+              placeholder="date (yyyy-mm-dd)"
+            />
+          </div>
 
-            <div>
-              <label for="date" class="form-label d-block text-center"
-                >Date</label
-              >
-              <input
-                id="date"
-                type="date"
-                name="date"
-                placeholder="date (yyyy-mm-dd)"
-              />
-            </div>
-
-            <button type="submit" class="btn btn-primary w-100">Submit</button>
-          </form>
-        </div>
-        <p>
-          <strong>GET user's exercise log: </strong>
-          <code>GET /api/users/:_id/logs?[from][&amp;to][&amp;limit]</code>
-        </p>
-        <p><strong>[ ]</strong> = optional</p>
-        <p>
-          <strong>from, to</strong> = dates (yyyy-mm-dd);
-          <strong>limit</strong> = number
-        </p>
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
       </div>
+      <section>
+        <h2 class="text-center fw-bold mb-3">Usage Guide</h2>
+        <ul>
+          <li>
+            <p>
+              <span class="fw-bold">1-</span> Create a new user and wait for the
+              id to be generated.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="fw-bold">2-</span> Add an exercise with the user id
+              generated in the previous step.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="fw-bold">3-</span> Get user's exercise log with the
+              user id entered in the following url:
+            </p>
+            <p>
+              <strong>GET user's exercise log: </strong>
+              <code>GET /api/users/:_id/logs?[from][&amp;to][&amp;limit]</code>
+            </p>
+            <p>
+              <strong>[ ]</strong> = query parameter between square brackets are
+              optional
+            </p>
+            <p>
+              <strong>from, to</strong> = valid format for dates is
+              (yyyy-mm-dd);
+            </p>
+            <p><strong>limit</strong> = number</p>
+          </li>
+        </ul>
+      </section>
+      <section id="requirements" class="py-5">
+        <h2 class="text-center fw-bold text-decoration-underline mb-5">
+          Requirements
+        </h2>
+        <div class="contenedor_requirements">
+          <img src="/images/requirements.webp" alt="Requirements" />
+        </div>
+      </section>
     </main>
 
     <footer class="footer" translate="no">

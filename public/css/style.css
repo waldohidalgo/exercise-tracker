@@ -18,9 +18,12 @@ h1 {
 h2 {
   text-align: center;
 }
-
+header {
+  background-color: #ffefaf;
+}
 p {
   max-width: 900px;
+  margin-inline: auto;
   text-align: center;
 }
 
@@ -77,4 +80,17 @@ code {
 .code_container {
   text-align: center;
   background-color: #fffec4;
+}
+
+.contenedor_requirements img {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+}
+#requirements {
+  background-color: #ffefaf;
+}
+ul {
+  list-style: none;
 }
