@@ -1,0 +1,23 @@
+{
+  "name": "exercise-tracker",
+  "version": "0.0.1",
+  "description": "A REST API project, part of Free Code Camp's curriculum",
+  "main": "index.js",
+  "author": "Waldo Hidalgo",
+  "type": "module",
+  "scripts": {
+    "start": "node api/index.js",
+    "dev": "node --watch api/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.6.0",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "express"
+  ]
+}
